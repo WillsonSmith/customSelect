@@ -112,20 +112,25 @@
 	</div>
 	<script type="text/javascript" src="js/customSelect.js"></script>
 	<script>
-
+		//start by creating a new object with the "customSelect" factory function
+		//pass in the select element, and the class name you would like on your wrapper
 		var blueSelect = customSelect(document.getElementById("myBlueSelect"), "testClass");
 
+		//tell it to insert the item
 		blueSelect.initiate();
-
+		//one available api - get the current value of your select
+		console.log(blueSelect.getCurrentValue());
 
 		//sample of applying to multiple selects
+		//get all with class "test2"
 		var testTwos = [].slice.call(document.querySelectorAll(".test2"));
+		//new array from factory of elements
 		var arrOfNew = testTwos.map(function(element) {
 
 			return customSelect(element, "tester");
 
 		});
-
+		//initiate each
 		arrOfNew.forEach(function(item) {
 
 			item.initiate();
