@@ -66,13 +66,13 @@ var customSelect = function customSelect(element, cssClass) {
 
   return {
 
-    initiate: function() {
+    initiate: function initiate() {
       //use the original element (why we made a clone) and insert the new wrapper with select before it
       _element.parentNode.insertBefore(my.wrapper, _element);
       //remove the original element so we don't have duplicates
       _element.parentNode.removeChild(_element);
      },
-     getCurrentValue: function() {
+     getCurrentValue: function getCurrentValue() {
 
         return getOptionContent(my.element);
 
